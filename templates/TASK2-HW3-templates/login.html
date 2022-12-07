@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+body {
+  background-color: #73869c;
+  font-family: verdana;
+}
+.upper{
+    background-color: #3f4d6b;
+    height : 10%;
+    width : 100%;
+    align : center;
+}
+.button {
+    background-color:#3f556e;
+    width : 75px;
+    border-color : #1a2129;
+    border-style : solid;
+    border-width : 1px;
+}
+head {
+    background-color: #869ac4;
+{
+
+
+</style>
+
+<div class="upper">
+    <head>
+        <meta charset="UTF-8">
+        <title>Login</title>
+        <header>
+            <h1>CV constructor login form</h1>
+        </header>
+    </head>
+</div>
+<body>
+
+    <form method="POST" action="">
+
+    {% csrf_token %}
+    {{form.as_p}}
+
+    <input type = "submit" name = "Login User">
+    </form>
+    <a href="/">to begin</a>
+</body>
+</html>

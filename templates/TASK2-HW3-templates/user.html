@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+body {
+  background-color: #73869c;
+  font-family: verdana;
+}
+.upper{
+    background-color: #3f4d6b;
+    height : 10%;
+    width : 100%;
+    align : center;
+}
+.button {
+    background-color:#3f556e;
+    width : 75px;
+    border-color : #1a2129;
+    border-style : solid;
+    border-width : 1px;
+}
+head {
+    background-color: #869ac4;
+{
+</style>
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{request.user}}</title>
+    <div class="upper">
+        <h1>CV constructor</h1>
+    </div>
+</head>
+<body>
+
+    Hello {{request.user}}! Fill the information about you and get your personal cv.
+    <br>
+<form method="POST" action="">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type = "submit" name = "Create User">
+</form>
+    <br>
+    <a href="/logout">logout</a>
+    <a href="/">to begin</a>
+    {% block content %} {% endblock %}
+
+</body>
+</html>
